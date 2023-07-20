@@ -12,7 +12,13 @@ import { ManipulateEleDirective } from './manipulate-ele.directive';
 import {ReactiveFormsModule} from '@angular/forms'
 import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { UrlErrorComponent } from './url-error/url-error.component';
+import { AddressComponent } from './address/address.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component'
+import { CoindeskService } from './api/coindesk.service';
+import { AutoHyphenDirective } from './custom-directive/auto-hyphen.directive';
+//import { NgxMask } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -21,7 +27,11 @@ import {HttpClientModule} from '@angular/common/http'
     EmployeeInfoComponent,
     SampleComponent,
     HomeComponent,
-    ManipulateEleDirective
+    ManipulateEleDirective,
+    UrlErrorComponent,
+    AddressComponent,
+    PersonalInfoComponent,
+    AutoHyphenDirective
   ],
   imports: [
     BrowserModule,
@@ -29,9 +39,10 @@ import {HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+   //NgxMaskModule.forRoot();
   ],
-  providers: [EmployeeService],
+  //providers: [EmployeeService,CoindeskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
