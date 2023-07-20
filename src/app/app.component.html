@@ -1,4 +1,134 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1>EmployeeProject</h1>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.component.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <p class="text mb-1">This is a {{envName}} environment</p>
+  </div>
+  <div>
+  <nav class="navbar navbar-expand-sm ">
+    <div class="container-fluid">
+      <a class="nav-link active" routerLink="" aria-current="page" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="" aria-current="page" href="#">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="employee-list" href="#">Employee List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="employee-info" href="#">Employee Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="api" href="#">API calling</a>
+          </li>
+          <!-- <router-outlet></router-outlet>  -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="containe bg-body-tertiary">
+  <router-outlet></router-outlet>
+</div>
+<div class="row mt-2">
+  <div class="col-6">
+    <div clas="RFbox">
+      <p>Reactive Form</p>
+    <form [formGroup]="loginForm" (ngSubmit)="loginBtn()">
+      <div class="row">
+        <div class="col-4">
+          <label for="username" class="">User Name :</label>
+        </div>
+        <div class="col-8">
+          <div class="row txtbox">
+          <input type="text" name="username" placeholder="enter username" formControlName="username">
+        </div>
+        <div class="spanrow">
+          <span *ngIf="checkUsername && checkUsername.invalid && checkUsername.touched ">
+            This field is Invalid
+          </span>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <label for="password">Password :</label>
+        </div>
+        <div class="col-8">
+          <div class="row txtbox">
+            <input type="password" name="password" placeholder="enter password" formControlName="password">
+          </div>
+          <div class="spanrow">
+          <span *ngIf="checkPassword && checkPassword.invalid && checkPassword.touched">
+            Password is too short
+          </span>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5 white"></div>
+        <div class="col-7">
+        <button class="btn-success " [disabled]="loginForm.invalid">Login</button>
+      </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  <div class="col-6">
+  <div class="TDbox">
+    <p>Template Driven Form</p>
+    <form #tdForm="ngForm" (ngSubmit)=Login(tdForm.value)>
+      <div class="row">
+        <div class="col-4">
+          <label for="username" class="">User Name :</label>
+        </div>
+        <div class="col-8">
+          <div class="row txtbox">
+            <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" placeholder="enter name" name="username" ngModel>
+          </div>
+          <div class="spanrow">
+            <span *ngIf="name.invalid && name.touched">This field is Invalid</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <label for="password"> Password : </label>
+        </div>
+        <div class="col-8">
+          <div class="row txtbox">
+            <input type="password" required  #password="ngModel" minlength="6" placeholder="enter password" name="password" ngModel>
+          </div>
+          <div class="spanrow">
+            <span *ngIf="password.invalid && password.touched">Password is too short</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5 white"></div>
+        <div class="col-7">
+        <button class="btn-success" [disabled]="tdForm.invalid">Login</button>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<!-- <html>
   <head>
     <h1>EmployeeProject</h1>
   </head>
@@ -6,14 +136,14 @@
   <body>
     <p>This is a {{envName}} environment</p>
     <h1>EmployeeProject</h1>
-    <!--
+    
     <app-employee-list></app-employee-list>
     <app-employee-info></app-employee-info>
-    -->
-    <a routerLink="">Home</a><br>
+     <a routerLink="">Home</a><br>
     <a routerLink="employee-list">Employee List</a><br>
     <a routerLink="employee-info">Employee Info</a><br>
-    <a routerLink="api">api calling</a><br>
+    <a routerLink="api">api calling</a><br> --
+    
     <router-outlet></router-outlet> 
     <p>Reactive Form</p><br>
     <form [formGroup]="loginForm" (ngSubmit)="loginBtn()">
@@ -43,4 +173,4 @@
 
        
   </body>
-</html>
+</html> -->
