@@ -41,7 +41,7 @@
 <div class="row mt-2">
   <div class="col-6">
     <div clas="RFbox">
-      <p>Reactive Form</p>
+      <p id="formtype">Reactive Form</p>
     <form [formGroup]="loginForm" (ngSubmit)="loginBtn()">
       <div class="row">
         <div class="col-4">
@@ -84,7 +84,7 @@
   </div>
   <div class="col-6">
   <div class="TDbox">
-    <p>Template Driven Form</p>
+    <p id="formtype">Template Driven Form</p>
     <form #tdForm="ngForm" (ngSubmit)=Login(tdForm.value)>
       <div class="row">
         <div class="col-4">

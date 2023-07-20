@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,700&display=swap');
 span{
     color: rgb(207, 2, 2);
 }
@@ -27,14 +28,21 @@ label{
 p{
     text-align: center;
 }
-.white{
-    background-color: white;
-}
+
 .navbar{
     background-color: dimgray;
+    font-weight: bolder;
 }
 
 body{
     overflow: hidden;
-    /* background-color: rgb(0, 228, 8);*/
+    font-family: 'Roboto' , san-serif;
+    /*background-image: linear-gradient(to bottom right, green,lightgreen,lightblue,blue );*/
+}
+
+button{
+    background-color: #e1ca77;
+}
+#formtype{
+    font-weight: 500;
 }
