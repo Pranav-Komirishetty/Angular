@@ -21,9 +21,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item">
-            <a class="nav-link active" routerLink="" aria-current="page" href="#">Home</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" routerLink="employee-list" href="#">Employee List</a>
           </li>
@@ -33,7 +30,6 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="api" href="#">API calling</a>
           </li>
-          <!-- <router-outlet></router-outlet>  -->
         </ul>
       </div>
     </div>
@@ -128,49 +124,3 @@
 </div>
 </body>
 </html>
-<!-- <html>
-  <head>
-    <h1>EmployeeProject</h1>
-  </head>
-  <link rel="stylesheet" href="app.component.css">
-  <body>
-    <p>This is a {{envName}} environment</p>
-    <h1>EmployeeProject</h1>
-    
-    <app-employee-list></app-employee-list>
-    <app-employee-info></app-employee-info>
-     <a routerLink="">Home</a><br>
-    <a routerLink="employee-list">Employee List</a><br>
-    <a routerLink="employee-info">Employee Info</a><br>
-    <a routerLink="api">api calling</a><br> --
-    
-    <router-outlet></router-outlet> 
-    <p>Reactive Form</p><br>
-    <form [formGroup]="loginForm" (ngSubmit)="loginBtn()">
-      <br>
-      <label for="username">User Name :</label>
-      <input type="text" name="username" placeholder="enter username" formControlName="username"><br>
-      <span *ngIf="checkUsername && checkUsername.invalid && checkUsername.touched ">
-        This field is Invalid
-      </span><br>
-      <label for="password">Password :</label>
-      <input type="password" name="password" placeholder="enter password" formControlName="password"><br>
-      <span *ngIf="checkPassword && checkPassword.invalid && checkPassword.touched">
-        Password is too short
-      </span><br>
-      <button [disabled]="loginForm.invalid">login</button>
-    </form><br>
-    <p>Template Driven Form</p>
-    <form #tdForm="ngForm" (ngSubmit)=Login(tdForm.value)>
-      <label for="username">User Name : </label>
-      <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" placeholder="enter name" name="username" ngModel> <br>
-      <span *ngIf="name.invalid && name.touched">This field is Invalid</span><br>
-      <label for="password"> Password : </label>
-      <input type="password" required  #password="ngModel" minlength="6" placeholder="enter password" name="password" ngModel><br>
-      <span *ngIf="password.invalid && password.touched">Password is too short</span><br>
-      <button [disabled]="tdForm.invalid">Login</button>
-    </form>
-
-       
-  </body>
-</html> -->
