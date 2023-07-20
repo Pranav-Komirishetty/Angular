@@ -1,14 +1,20 @@
-<h2>Employee Info</h2>
-
-<table >
-    <th >ID
-        <tr *ngFor = "let employeedata of employeedata">{{employeedata.ID}}</tr>
-    </th>
-    <th>Name
-        <tr *ngFor = "let employeedata of employeedata">{{employeedata.Name}}</tr>
-    </th>
-    <th>Age
-        <tr *ngFor = "let employeedata of employeedata">{{employeedata.Age}}</tr>
-    </th>
-</table>
+<div class="container">
+    <h2>Employee Info</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor = "let employeedata of employeedata">
+                <td>{{employeedata.ID}}</td>
+                <td>{{employeedata.Name}}</td>
+                <td>{{employeedata.Age}}</td>
+            </tr>
+        </tbody> 
+    </table>
+</div>
 
