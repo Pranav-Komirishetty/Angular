@@ -8,9 +8,16 @@ import {CoindeskService} from '../api/coindesk.service'
 })
 export class SampleComponent {
   coinInfo : any;
+  uniqueID : string = '';
+  val : string = '';
   constructor(private coindesk : CoindeskService){
     coindesk.coinData().subscribe((data)=>{
       this.coinInfo=data;
     })
+  }
+  submitBtn(){
+    const unqID = this.uniqueID.replace(/-/g, '');
+    this.val=unqID;
+    console.log(unqID);
   }
 }

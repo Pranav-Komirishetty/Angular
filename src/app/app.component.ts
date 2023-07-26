@@ -10,13 +10,6 @@ import {CoindeskService} from './api/coindesk.service'
 })
 export class AppComponent {
 
-  coinInfo : any;
-  constructor(private coindesk : CoindeskService){
-    coindesk.coinData().subscribe((data)=>{
-      console.log('data',data);
-      this.coinInfo=data;
-    })
-  }
 
   envName = environment.name;
   title = 'NGproject';

@@ -1,7 +1,9 @@
 <div class="container">
     <div class="customtxtbox">
         <label for="">Enter ID</label>
-        <input class="my-5 ms-3" type="text" appAutoHyphen = "inputValue" placeholder="enter 12 digit ID" maxlength="14">
+        <input class="my-5 ms-3" [(ngModel)]="uniqueID" type="text" appAutoHyphen = "inputValue" placeholder="enter 12 digit ID" maxlength="14">
+        <button (click)="submitBtn()">Submit</button>
+        <p>You have entered : {{val}}</p>
     </div>
     <div class="row">
         <div class="col-6 apitxt">
