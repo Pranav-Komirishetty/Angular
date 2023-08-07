@@ -18,4 +18,8 @@ describe('PersonalInfoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it("testing html element", () =>{
+    const data = fixture.nativeElement;
+    expect(data.querySelector("p").textContent).toBe("personal information of employee");
+  }) 
 });

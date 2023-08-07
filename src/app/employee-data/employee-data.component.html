@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Employee Info</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor= "let employee of employees">
+                <td>{{employee.ID}}</td>
+                <td>{{employee.EmployeeName}}</td>
+                <td>{{employee.Email}}</td>
+                <td>{{employee.Age}}</td>
+                <td>{{employee.Salary}}</td>
+            </tr>
+        </tbody> 
+    </table>
+</div>

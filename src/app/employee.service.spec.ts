@@ -13,4 +13,7 @@ describe('EmployeeService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('count should be 3',()=>{
+    expect(service.empCount()).toBe(3);
+  });
 });

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -18,6 +18,7 @@ import { AddressComponent } from './address/address.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component'
 import { CoindeskService } from './api/coindesk.service';
 import { AutoHyphenDirective } from './custom-directive/auto-hyphen.directive';
+import { EmployeeDataComponent } from './employee-data/employee-data.component';
 //import { NgxMask } from 'ngx-mask'
 
 @NgModule({
@@ -31,10 +32,12 @@ import { AutoHyphenDirective } from './custom-directive/auto-hyphen.directive';
     UrlErrorComponent,
     AddressComponent,
     PersonalInfoComponent,
-    AutoHyphenDirective
+    AutoHyphenDirective,
+    EmployeeDataComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

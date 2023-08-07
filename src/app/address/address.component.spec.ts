@@ -18,4 +18,8 @@ describe('AddressComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it("testing html element",()=>{
+    const data = fixture.nativeElement;
+    expect(data.querySelector(".Addrstxt").textContent).toBe("Address of employee");
+  });
 });

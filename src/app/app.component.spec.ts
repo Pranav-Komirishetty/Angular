@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule,FormsModule,ReactiveFormsModule],
     declarations: [AppComponent]
   }));
 
@@ -19,11 +21,9 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('NGproject');
   });
-
-  it('should render title', () => {
+  it("testing environments", ()=>{
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('NGproject app is running!');
-  });
+    const app = fixture.componentInstance;
+    expect(app.envName).toBe("TEST" && "DEV" && "PROD");
+  })
 });
